@@ -10,11 +10,18 @@
 
 <nav class="nav">
   <span class="nav-brand">SERGIO BARANDICA</span>
-  <a href="#perfil">Perfil</a>
-  <a href="#educacion">Educación</a>
-  <a href="#experiencia">Experiencia</a>
-  <a href="#formacion">Formación</a>
-  <a href="#contacto">Contacto</a>
+  <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú de navegación">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#perfil">Perfil</a>
+    <a href="#educacion">Educación</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#formacion">Formación</a>
+    <a href="#contacto">Contacto</a>
+  </div>
 </nav>
 
 <div class="wrap">
@@ -46,14 +53,14 @@
 
   <hr class="hr">
 
-  <section id="perfil" class="section">
+  <section id="perfil" class="section reveal">
     <h2 style="margin-bottom:28px;">Perfil profesional</h2>
     <p class="muted-82" style="font-size:19px; max-width:80ch; line-height:1.65; margin:0;">Diseñador Industrial egresado de la Universidad Industrial de Santander con más de 10 años de experiencia en docencia y formación profesional integral. Actualmente cursando Maestría en Tecnología e Innovación Educativa en la Universidad Santo Tomás. Instructor certificado del SENA especializado en pedagogía activa, integración de TICs y metodologías innovadoras como STEM y Design Thinking. Amplia trayectoria en diseño curricular, planeación pedagógica y formulación de proyectos de investigación e innovación educativa, con enfoque en bienestar social y responsabilidad sustentable. Capacidad demostrada de liderazgo, comunicación asertiva y trabajo en equipos multidisciplinarios.</p>
   </section>
 
   <hr class="hr">
 
-  <section id="educacion" class="section">
+  <section id="educacion" class="section reveal">
     <h2 style="margin-bottom:32px;">Educación</h2>
     <div class="card-grid">
       <div class="card">
@@ -81,7 +88,7 @@
 
   <hr class="hr">
 
-  <section class="section">
+  <section class="section reveal">
     <h2 style="margin-bottom:32px;">Competencias clave</h2>
     <div style="display:flex; flex-wrap:wrap; gap:12px;">
       <span class="tag">Diseño Curricular</span>
@@ -105,7 +112,7 @@
 
   <hr class="hr">
 
-  <section id="experiencia" class="section">
+  <section id="experiencia" class="section reveal">
     <h2 style="margin-bottom:32px;">Experiencia laboral</h2>
 
     <div class="exp-item">
@@ -174,7 +181,7 @@
 
   <hr class="hr">
 
-  <section class="section">
+  <section class="section reveal">
     <h2 style="margin-bottom:32px;">Logros en investigación y divulgación</h2>
 
     <div class="achieve-item">
@@ -193,12 +200,19 @@
 
   <hr class="hr">
 
-  <section id="formacion" class="section">
+  <section id="formacion" class="section reveal">
     <h2 style="margin-bottom:8px;">Formación complementaria</h2>
     <p class="muted-60" style="margin:0 0 36px; font-size:14.5px;">Certificaciones SENA por área de especialización</p>
 
+    <div class="cert-filters" role="group" aria-label="Filtrar certificaciones por categoría">
+      <button type="button" class="filter-btn is-active" data-filter="todas">Todas</button>
+      <button type="button" class="filter-btn" data-filter="pedagogia">Pedagogía y Didáctica</button>
+      <button type="button" class="filter-btn" data-filter="tics">TICs y Ambientes Virtuales</button>
+      <button type="button" class="filter-btn" data-filter="investigacion">Investigación e Innovación</button>
+    </div>
+
     <div class="formacion-grid">
-      <div>
+      <div data-category="pedagogia">
         <h6>Pedagogía y Didáctica</h6>
         <ul class="cert-list">
           <li>Generación de ideas innovadoras con Design Thinking <span>— 2026</span></li>
@@ -217,7 +231,7 @@
         </ul>
       </div>
 
-      <div>
+      <div data-category="tics">
         <h6>TICs y Ambientes Virtuales</h6>
         <ul class="cert-list">
           <li>Manejo de herramientas para la formación en ambientes virtuales de aprendizaje <span>— 2026</span></li>
@@ -231,7 +245,7 @@
         </ul>
       </div>
 
-      <div>
+      <div data-category="investigacion">
         <h6>Investigación e Innovación</h6>
         <ul class="cert-list">
           <li>Herramientas Básicas para la Investigación Formativa <span>— 2025</span></li>
@@ -255,7 +269,7 @@
 
   <hr class="hr">
 
-  <section class="section">
+  <section class="section reveal">
     <h2 style="margin-bottom:32px;">Habilidades técnicas</h2>
     <div style="display:flex; flex-wrap:wrap; gap:12px;">
       <span class="tag">Illustrator</span>
@@ -275,7 +289,7 @@
 
   <hr class="hr">
 
-  <section class="section">
+  <section class="section reveal">
     <h2 style="margin-bottom:32px;">Referencias profesionales</h2>
     <div class="card-grid">
       <div class="card ref-card">
@@ -314,5 +328,8 @@
   </div>
 </footer>
 
+<button type="button" id="backToTop" class="back-to-top" aria-label="Volver al inicio de la página">↑</button>
+
+<script src="script.js" defer></script>
 </body>
 </html>
