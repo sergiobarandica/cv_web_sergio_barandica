@@ -160,6 +160,16 @@ img { display: block; max-width: 100%; }
 .achieve-item h4 { margin: 0 0 6px; }
 .achieve-item p { margin: 0; font-size: 14.5px; }
 
+/* ===== Competencias clave ===== */
+.skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 2px; background: var(--color-divider);
+}
+.skills-col { background: var(--color-surface); padding: 28px 22px; text-align: center; }
+.skills-col h6 { color: var(--color-accent); margin: 0 0 18px; }
+.skills-list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.skills-list li { font-size: 14.5px; line-height: 1.4; font-weight: 600; }
+
 /* ===== Formación complementaria ===== */
 .formacion-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 48px; }
 .formacion-grid h6 { color: var(--color-accent); margin: 0 0 18px; }
